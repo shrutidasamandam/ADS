@@ -44,7 +44,6 @@ class Tree {
     }
 
     void insert(int k);
-    void remove(int k);
 };
 
 Node::Node(bool leaf1) {
@@ -226,7 +225,7 @@ Node *Node::search(int k) {
         i++;
     if (keys[i] == k)
         return this;
-
+1
     if (leaf == true)
         return NULL;
     return C[i]->search(k);
@@ -234,7 +233,7 @@ Node *Node::search(int k) {
 
 int main() {
     Tree t;
-    cout << "1. Insert\n3. Display Tree\n4. Exit" << endl;
+    cout << "1. Insert\n2. Display Tree\n3. Exit" << endl;
     int choice, node;
     do {
         cout << "Enter choice: ";
@@ -245,12 +244,12 @@ int main() {
                 cin >> node;
                 t.insert(node);
                 break;
-            case 3:
+            case 2:
                 cout << "Tree is \n";
                 t.traverse();
                 cout << endl;
                 break;
-            case 4:
+            case 3:
                 return 0;
             default:
                 cout << "Enter valid choice!" << endl;
